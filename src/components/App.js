@@ -1,11 +1,10 @@
 import React from "react";
 import Home from "./Home"; // Correct import paths
-import About from "./About";
-import Links from "./Links";
+import About from "./About"; // Correct import paths
 
 function App() {
   const user = {
-    username: "Liza",
+    name: "Liza", // Changed 'username' to 'name' for consistency
     city: "New York",
     bio: "I am a passionate web developer.",
     github: "https://github.com/liza",
@@ -14,8 +13,14 @@ function App() {
 
   return (
     <div>
-      <Home username={user.username} city={user.city} />
-      <About bio={user.bio} github={user.github} linkedin={user.linkedin} />
+      <Home name={user.name} city={user.city} color="firebrick" />{" "}
+      {/* Pass color if needed */}
+      <About
+        bio={user.bio}
+        github={user.github}
+        linkedin={user.linkedin}
+      />{" "}
+      {/* Make sure About uses Links if required */}
     </div>
   );
 }

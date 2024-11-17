@@ -1,5 +1,6 @@
+// src/components/About.js
 import React from "react";
-import Links from "./Links"; // Adjust this if necessary
+import Links from "./Links"; // Importing Links component
 
 function About({ bio, github, linkedin }) {
   return (
@@ -7,7 +8,7 @@ function About({ bio, github, linkedin }) {
       <h2>About Me</h2>
       {bio && bio !== "" && <p>{bio}</p>} {/* Conditional rendering for bio */}
       <Links github={github} linkedin={linkedin} />{" "}
-      {/* Pass the links to Links component */}
+      {/* Passing the links to Links component */}
     </div>
   );
 }
