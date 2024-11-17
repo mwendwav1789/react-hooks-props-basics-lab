@@ -1,15 +1,13 @@
 import React from "react";
+import Links from "./Links"; // Adjust this if necessary
 
-function About() {
+function About({ bio, github, linkedin }) {
   return (
     <div id="about">
       <h2>About Me</h2>
-      <p>
-        {bio && <p>{bio}</p>}
-        <Links github={github} />
-      </p>
-      <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      {}
+      {bio && bio !== "" && <p>{bio}</p>} {/* Conditional rendering for bio */}
+      <Links github={github} linkedin={linkedin} />{" "}
+      {/* Pass the links to Links component */}
     </div>
   );
 }

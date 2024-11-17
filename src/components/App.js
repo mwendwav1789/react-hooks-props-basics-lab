@@ -1,31 +1,21 @@
 import React from "react";
-import NavBar from "./NavBar";
-import Home from "./Home";
+import Home from "./Home"; // Correct import paths
 import About from "./About";
+import Links from "./Links";
 
-
-function App() 
+function App() {
   const user = {
-    name: "Victor Mwendwa",
-    bio: "Software developer with a love for open-source and collaboration.",
-    github: "https://github.com/mwendwav1789",
+    username: "Liza",
+    city: "New York",
+    bio: "I am a passionate web developer.",
+    github: "https://github.com/liza",
+    linkedin: "https://linkedin.com/in/liza",
   };
 
   return (
     <div>
-      <Home name={user.name} />
-      <About bio={user.bio} github={user.github} />
-    </div>
-  )
-import user from "../data/user";
-console.log(user);
-
-function App() {
-  return (
-    <div>
-      <NavBar />
-      <Home />
-      <About />
+      <Home username={user.username} city={user.city} />
+      <About bio={user.bio} github={user.github} linkedin={user.linkedin} />
     </div>
   );
 }
